@@ -459,7 +459,9 @@ public:
 
         pushButton_10 = new QPushButton(centralWidget);
         pushButton_10->setObjectName(QString::fromUtf8("pushButton_10"));
+        pushButton_10->setEnabled(false);
         pushButton_10->setMinimumSize(QSize(0, 50));
+        pushButton_10->setFont(font7);
 
         horizontalLayout_3->addWidget(pushButton_10);
 
@@ -506,7 +508,7 @@ public:
         pushButton_3->setText(QApplication::translate("MainWindow", "\350\207\252\345\212\250\346\211\247\350\241\214", nullptr));
         runOneSecond->setText(QApplication::translate("MainWindow", "\346\211\247\350\241\214", nullptr));
         pushButton->setText(QApplication::translate("MainWindow", "\351\207\215\347\275\256", nullptr));
-        pushButton_10->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton_10->setText(QApplication::translate("MainWindow", "\350\216\267\345\276\227\347\273\223\346\236\234", nullptr));
     } // retranslateUi
 
 };

@@ -24,8 +24,8 @@ void DialogResult::getResult(QList<PCB> finish)
         weightedTurnaroundTime=(float)(finish[i].endTime-finish[i].arrivalTime)/(float)(finish[i].runningTime);
     }
     ui->lineEdit->setText(QString::number((double)turnaroundTime/(double)finish.size()));
-    ui->lineEdit_2->setText(QString::number((double)waitingTime/(double)finish.size()));
-    ui->lineEdit_3->setText(QString::number((double)weightedTurnaroundTime/(double)finish.size()));
+    ui->lineEdit_2->setText(QString::number((double)weightedTurnaroundTime/(double)finish.size()));
+    ui->lineEdit_3->setText(QString::number((double)waitingTime/(double)finish.size()));
 }
 
 void DialogResult::on_pushButton_clicked()

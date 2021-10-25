@@ -97,7 +97,7 @@ void MainWindow::on_pushButton_6_clicked()
         qSort(arrivePart.begin(),arrivePart.end(),comparePriorityData);
         qSort(notArrivePart.begin(),notArrivePart.end(),comparePriorityData);
         arrivePart.append(notArrivePart);
-        arrive=arrivePart;XFB
+        arrive=arrivePart;
     }
     else if(ui->radioButtonTimeSlice->isChecked()){
         qSort(arrive.begin(),arrive.end(),compareTimeSliceData);
@@ -318,14 +318,13 @@ void MainWindow::on_runOneSecond_clicked()
     //    }
     if(arrive.size()==0&&suspended.size()==0&&finish.size()!=0&&runningOne->PID=="waiting"&&runningTwo->PID=="waiting"&&runningThree->PID=="waiting"){
         ui->pushButton_10->setEnabled(true);
-        ui->pushButton_10->setEnabled(true);
+        ui->pushButton->setEnabled(true);
         ui->pushButton_6->setEnabled(false);
         ui->radioButtonPriority->setEnabled(false);
         ui->radioButtonTimeSlice->setEnabled(false);
         ui->radioButton->setEnabled(false);
         ui->radioButton_2->setEnabled(false);
         ui->addPushButton->setEnabled(false);
-        ui->pushButton->setEnabled(false);
         ui->pushButton_3->setEnabled(false);
         ui->pushButton_5->setEnabled(false);
         ui->pushButton_6->setEnabled(false);
@@ -334,8 +333,8 @@ void MainWindow::on_runOneSecond_clicked()
         ui->pushButton_9->setEnabled(false);
         ui->runOneSecond->setEnabled(false);
         return;
-    }
-    else ui->pushButton_10->setEnabled(false);
+    }else ui->pushButton_10->setEnabled(false);
+
     ui->addPushButton->setEnabled(true);
     ui->pushButton->setEnabled(true);
     ui->pushButton_3->setEnabled(true);
@@ -344,7 +343,6 @@ void MainWindow::on_runOneSecond_clicked()
     ui->pushButton_7->setEnabled(true);
     ui->pushButton_8->setEnabled(true);
     ui->pushButton_9->setEnabled(true);
-    ui->pushButton_10->setEnabled(true);
     ui->runOneSecond->setEnabled(true);
 }
 
@@ -482,7 +480,7 @@ void MainWindow::on_pushButton_3_clicked()
             adjustArrivalQueue(arrive);
             adjustFinishQueue(finish);
             adjustSuspendedQueue(suspended);
-            QTime dieTime = QTime::currentTime().addMSecs(2000);
+            QTime dieTime = QTime::currentTime().addMSecs(1000);
             while( QTime::currentTime() < dieTime )
                 QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
             if(suspended.size()>0){
@@ -554,7 +552,7 @@ void MainWindow::on_pushButton_3_clicked()
             adjustFinishQueue(finish);
             adjustSuspendedQueue(suspended);
 
-            QTime dieTime = QTime::currentTime().addMSecs(2000);
+            QTime dieTime = QTime::currentTime().addMSecs(1000);
             while( QTime::currentTime() < dieTime )
                 QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
             //时间加一
@@ -569,14 +567,13 @@ void MainWindow::on_pushButton_3_clicked()
     }
     if(arrive.size()==0&&suspended.size()==0&&finish.size()!=0&&runningOne->PID=="waiting"&&runningTwo->PID=="waiting"&&runningThree->PID=="waiting"){
         ui->pushButton_10->setEnabled(true);
-        ui->pushButton_10->setEnabled(true);
+        ui->pushButton->setEnabled(true);
         ui->pushButton_6->setEnabled(false);
         ui->radioButtonPriority->setEnabled(false);
         ui->radioButtonTimeSlice->setEnabled(false);
         ui->radioButton->setEnabled(false);
         ui->radioButton_2->setEnabled(false);
         ui->addPushButton->setEnabled(false);
-        ui->pushButton->setEnabled(false);
         ui->pushButton_3->setEnabled(false);
         ui->pushButton_5->setEnabled(false);
         ui->pushButton_6->setEnabled(false);
@@ -585,7 +582,7 @@ void MainWindow::on_pushButton_3_clicked()
         ui->pushButton_9->setEnabled(false);
         ui->runOneSecond->setEnabled(false);
         return;
-    }
+    }else ui->pushButton_10->setEnabled(false);
     //        if(!state)break;
     //    }
     ui->addPushButton->setEnabled(true);
@@ -596,7 +593,6 @@ void MainWindow::on_pushButton_3_clicked()
     ui->pushButton_7->setEnabled(true);
     ui->pushButton_8->setEnabled(true);
     ui->pushButton_9->setEnabled(true);
-    ui->pushButton_10->setEnabled(true);
     ui->runOneSecond->setEnabled(true);
 }
 
