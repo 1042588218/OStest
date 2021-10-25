@@ -35,9 +35,11 @@ public:
     QVBoxLayout *verticalLayout_2;
     QLabel *label_4;
     QPushButton *pushButton_7;
-    QRadioButton *radioButtonPriority;
+    QRadioButton *radioButtonFCFS;
     QSpacerItem *verticalSpacer;
-    QRadioButton *radioButtonTimeSlice;
+    QRadioButton *radioButtonSJF;
+    QSpacerItem *verticalSpacer_4;
+    QRadioButton *radioButtonPriority;
     QSpacerItem *verticalSpacer_3;
     QLabel *label_9;
     QLabel *labelCurrentTime;
@@ -116,24 +118,34 @@ public:
 
         verticalLayout_2->addWidget(pushButton_7);
 
-        radioButtonPriority = new QRadioButton(centralWidget);
-        radioButtonPriority->setObjectName(QString::fromUtf8("radioButtonPriority"));
+        radioButtonFCFS = new QRadioButton(centralWidget);
+        radioButtonFCFS->setObjectName(QString::fromUtf8("radioButtonFCFS"));
         QFont font1;
         font1.setPointSize(10);
-        radioButtonPriority->setFont(font1);
-        radioButtonPriority->setChecked(true);
+        radioButtonFCFS->setFont(font1);
 
-        verticalLayout_2->addWidget(radioButtonPriority);
+        verticalLayout_2->addWidget(radioButtonFCFS);
 
         verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
         verticalLayout_2->addItem(verticalSpacer);
 
-        radioButtonTimeSlice = new QRadioButton(centralWidget);
-        radioButtonTimeSlice->setObjectName(QString::fromUtf8("radioButtonTimeSlice"));
-        radioButtonTimeSlice->setFont(font1);
+        radioButtonSJF = new QRadioButton(centralWidget);
+        radioButtonSJF->setObjectName(QString::fromUtf8("radioButtonSJF"));
+        radioButtonSJF->setFont(font1);
 
-        verticalLayout_2->addWidget(radioButtonTimeSlice);
+        verticalLayout_2->addWidget(radioButtonSJF);
+
+        verticalSpacer_4 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_2->addItem(verticalSpacer_4);
+
+        radioButtonPriority = new QRadioButton(centralWidget);
+        radioButtonPriority->setObjectName(QString::fromUtf8("radioButtonPriority"));
+        radioButtonPriority->setFont(font1);
+        radioButtonPriority->setChecked(true);
+
+        verticalLayout_2->addWidget(radioButtonPriority);
 
         verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
@@ -489,8 +501,9 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
         label_4->setText(QApplication::translate("MainWindow", "\350\260\203\345\272\246\347\256\227\346\263\225", nullptr));
         pushButton_7->setText(QString());
+        radioButtonFCFS->setText(QApplication::translate("MainWindow", "\345\205\210\346\235\245\345\205\210\346\234\215\345\212\241\350\260\203\345\272\246", nullptr));
+        radioButtonSJF->setText(QApplication::translate("MainWindow", "\347\237\255\344\275\234\344\270\232\344\274\230\345\205\210\350\260\203\345\272\246", nullptr));
         radioButtonPriority->setText(QApplication::translate("MainWindow", "\345\212\250\346\200\201\344\274\230\345\205\210\346\235\203\350\260\203\345\272\246", nullptr));
-        radioButtonTimeSlice->setText(QApplication::translate("MainWindow", "\346\227\266\351\227\264\347\211\207\350\275\256\350\275\254\350\260\203\345\272\246", nullptr));
         label_9->setText(QApplication::translate("MainWindow", "\345\267\262\346\211\247\350\241\214\346\227\266\351\227\264", nullptr));
         labelCurrentTime->setText(QString());
         label_5->setText(QApplication::translate("MainWindow", "\350\260\203\345\272\246\346\274\224\347\244\272", nullptr));

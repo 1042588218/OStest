@@ -43,7 +43,7 @@ public:
     void setRunningTwo(PCB* tmp);
     void setRunningThree(PCB* tmp);
     static bool comparePriorityData(const PCB &barAmount1, const PCB &barAmount2);
-    static bool compareTimeSliceData(const PCB &barAmount1, const PCB &barAmount2);
+    static bool compareFCFSData(const PCB &barAmount1, const PCB &barAmount2);
 
 private slots:
     void getPCB(PCB* tmp);

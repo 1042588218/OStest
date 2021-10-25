@@ -129,7 +129,7 @@ bool MainWindow::comparePriorityData(const PCB &barAmount1, const PCB &barAmount
     return false;
 }
 
-bool MainWindow::compareTimeSliceData(const PCB &barAmount1, const PCB &barAmount2)
+bool MainWindow::compareFCFSData(const PCB &barAmount1, const PCB &barAmount2)
 {
 
 }

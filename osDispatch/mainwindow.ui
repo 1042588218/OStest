@@ -51,17 +51,14 @@
        </widget>
       </item>
       <item>
-       <widget class="QRadioButton" name="radioButtonPriority">
+       <widget class="QRadioButton" name="radioButtonFCFS">
         <property name="font">
          <font>
           <pointsize>10</pointsize>
          </font>
         </property>
         <property name="text">
-         <string>动态优先权调度</string>
-        </property>
-        <property name="checked">
-         <bool>true</bool>
+         <string>先来先服务调度</string>
         </property>
        </widget>
       </item>
@@ -79,14 +76,42 @@
        </spacer>
       </item>
       <item>
-       <widget class="QRadioButton" name="radioButtonTimeSlice">
+       <widget class="QRadioButton" name="radioButtonSJF">
         <property name="font">
          <font>
           <pointsize>10</pointsize>
          </font>
         </property>
         <property name="text">
-         <string>时间片轮转调度</string>
+         <string>短作业优先调度</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioButtonPriority">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>动态优先权调度</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
