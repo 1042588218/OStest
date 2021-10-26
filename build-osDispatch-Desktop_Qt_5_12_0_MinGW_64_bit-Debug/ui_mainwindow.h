@@ -508,7 +508,7 @@ public:
         labelCurrentTime->setText(QString());
         label_5->setText(QApplication::translate("MainWindow", "\350\260\203\345\272\246\346\274\224\347\244\272", nullptr));
         pushButton_8->setText(QString());
-        label->setText(QApplication::translate("MainWindow", "\345\210\260\350\276\276\351\230\237\345\210\227", nullptr));
+        label->setText(QApplication::translate("MainWindow", "\345\260\261\347\273\252\347\255\211\345\276\205\351\230\237\345\210\227", nullptr));
         label_3->setText(QApplication::translate("MainWindow", "\345\256\214\346\210\220\351\230\237\345\210\227", nullptr));
         label_2->setText(QApplication::translate("MainWindow", "\346\214\202\350\265\267\351\230\237\345\210\227", nullptr));
         label_10->setText(QApplication::translate("MainWindow", "CPU:", nullptr));

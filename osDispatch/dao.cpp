@@ -17,12 +17,30 @@ void MainWindow::adjustArrivalQueue(QList<PCB> tmp){
     modelArrive->setHeaderData(3,Qt::Horizontal,"等待时间");
     modelArrive->setHeaderData(4,Qt::Horizontal,"优先级");
     ui->tableViewArrival->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    int row=0;
     for (int i=0;i<tmp.size();i++) {
-       modelArrive->setItem(i,0,new QStandardItem(tmp[i].PID));
-       modelArrive->setItem(i,1,new QStandardItem(QString::number(tmp[i].arrivalTime)));
-       modelArrive->setItem(i,2,new QStandardItem(QString::number(tmp[i].requiredRunningTime)));
-       modelArrive->setItem(i,3,new QStandardItem(QString::number(tmp[i].waitTime)));
-       modelArrive->setItem(i,4,new QStandardItem(QString::number(tmp[i].priority)));
+        if(row==3){
+            i--;
+            modelArrive->setItem(row,0,new QStandardItem("--------"));
+            modelArrive->setItem(row,1,new QStandardItem("--------"));
+            modelArrive->setItem(row,2,new QStandardItem("--------"));
+            modelArrive->setItem(row,3,new QStandardItem("--------"));
+            modelArrive->setItem(row,4,new QStandardItem("--------"));
+            row++;
+            continue;
+        }
+        if(row<3&&tmp[i].arrivalTime>currentTime){
+            i--;
+            modelArrive->setItem(row,0,new QStandardItem("waiting"));
+            row++;
+            continue;
+        }
+        modelArrive->setItem(row,0,new QStandardItem(tmp[i].PID));
+        modelArrive->setItem(row,1,new QStandardItem(QString::number(tmp[i].arrivalTime)));
+        modelArrive->setItem(row,2,new QStandardItem(QString::number(tmp[i].requiredRunningTime)));
+        modelArrive->setItem(row,3,new QStandardItem(QString::number(tmp[i].waitTime)));
+        modelArrive->setItem(row,4,new QStandardItem(QString::number(tmp[i].priority)));
+        row++;
     }
     ui->tableViewArrival->setModel(modelArrive);
 }

@@ -271,7 +271,7 @@
              <enum>Qt::LeftToRight</enum>
             </property>
             <property name="text">
-             <string>到达队列</string>
+             <string>就绪等待队列</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
