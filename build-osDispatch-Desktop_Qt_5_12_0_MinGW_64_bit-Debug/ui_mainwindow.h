@@ -57,6 +57,7 @@ public:
     QVBoxLayout *verticalLayout_4;
     QTableView *tableViewSuspended;
     QLabel *label_2;
+    QPushButton *pushButton_2;
     QVBoxLayout *verticalLayout_6;
     QHBoxLayout *horizontalLayout_4;
     QVBoxLayout *verticalLayout_7;
@@ -207,7 +208,7 @@ public:
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
         tableViewArrival = new QTableView(centralWidget);
         tableViewArrival->setObjectName(QString::fromUtf8("tableViewArrival"));
-        tableViewArrival->setMinimumSize(QSize(0, 250));
+        tableViewArrival->setMinimumSize(QSize(0, 200));
         tableViewArrival->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
         tableViewArrival->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
         tableViewArrival->setSortingEnabled(false);
@@ -243,7 +244,7 @@ public:
         verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
         tableViewFinish = new QTableView(centralWidget);
         tableViewFinish->setObjectName(QString::fromUtf8("tableViewFinish"));
-        tableViewFinish->setMinimumSize(QSize(0, 250));
+        tableViewFinish->setMinimumSize(QSize(0, 200));
         tableViewFinish->setLineWidth(1);
         tableViewFinish->setSizeAdjustPolicy(QAbstractScrollArea::AdjustIgnored);
 
@@ -265,7 +266,7 @@ public:
         verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
         tableViewSuspended = new QTableView(centralWidget);
         tableViewSuspended->setObjectName(QString::fromUtf8("tableViewSuspended"));
-        tableViewSuspended->setMinimumSize(QSize(0, 250));
+        tableViewSuspended->setMinimumSize(QSize(0, 200));
 
         verticalLayout_4->addWidget(tableViewSuspended);
 
@@ -282,6 +283,12 @@ public:
 
 
         verticalLayout->addLayout(horizontalLayout_2);
+
+        pushButton_2 = new QPushButton(centralWidget);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        pushButton_2->setEnabled(false);
+
+        verticalLayout->addWidget(pushButton_2);
 
         verticalLayout_6 = new QVBoxLayout();
         verticalLayout_6->setSpacing(6);
@@ -511,6 +518,7 @@ public:
         label->setText(QApplication::translate("MainWindow", "\345\260\261\347\273\252\347\255\211\345\276\205\351\230\237\345\210\227", nullptr));
         label_3->setText(QApplication::translate("MainWindow", "\345\256\214\346\210\220\351\230\237\345\210\227", nullptr));
         label_2->setText(QApplication::translate("MainWindow", "\346\214\202\350\265\267\351\230\237\345\210\227", nullptr));
+        pushButton_2->setText(QString());
         label_10->setText(QApplication::translate("MainWindow", "CPU:", nullptr));
         radioButton_2->setText(QApplication::translate("MainWindow", "\345\215\225\346\240\270", nullptr));
         radioButton->setText(QApplication::translate("MainWindow", "\345\244\232\346\240\270", nullptr));
