@@ -23,6 +23,7 @@ void DialogSuspended::on_pushButton_clicked()
     }
     QString tmp=ui->lineEdit->text();
     emit(getPid(tmp));
+
     this->close();
 }
 
